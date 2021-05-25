@@ -18,6 +18,7 @@ OBJS = $(PROG).o $(IPROUTE2_OBJS_FULL)
 
 
 all: $(PROG)
+	 sudo setcap cap_sys_admin=ep $(PROG)
 
 $(PROG): $(OBJS)
 

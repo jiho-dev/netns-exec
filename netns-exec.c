@@ -112,6 +112,10 @@ int main(int argc, char *argv[])
 
 
     char **command_argv;
+	char ps1[256];
+
+	sprintf(ps1, "[\\u@\\h:\\e[0;31m%s\\e[m \\w]$ ", argv[1]);
+	setenv("PS1", ps1, 1);
 
     // if no command given, start shell
     if (argc == 2) {
